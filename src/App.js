@@ -1,25 +1,14 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
 
-function App() {
+import Timer from "./components/Timer"
+ const App = () => {
+  let[starttime,setStarttime]=React.useState(0)
+  let[endtime,setEndtime]=React.useState(0)
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{height:"400px",border:"5px solid blue",margin:"auto",width:"50%",backgroundColor:"midnightblue"}}>
+      <Timer setEndtime={setEndtime} setStarttime={setStarttime} endtime={endtime} starttime={starttime}/>
+     
     </div>
-  );
+  )
 }
-
-export default App;
+export default App
